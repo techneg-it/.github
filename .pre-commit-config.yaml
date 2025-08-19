@@ -33,6 +33,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                groupManager.json|
+               pre-commit.json|
                weekly.json|
                (?!)
           )$
