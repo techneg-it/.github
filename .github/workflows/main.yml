@@ -18,19 +18,19 @@ jobs:
       should-run: ${{ steps.action.outputs.should-run }}
     steps:
       - id: action
-        uses: techneg-it/should-workflow-run@dcbb88600d59ec2842778ef1e2d41f680f876329 # v1.0.0
+        uses: techneg-it/should-workflow-run@eff19348eb884f57e05bc6f05ae48ece3af14714 # v1.0.1
   pre-commit:
     name: Lint / `pre-commit`
     needs: should-run
     if: fromJSON(needs.should-run.outputs.should-run)
-    container: techneg/ci-pre-commit:v2.3.3@sha256:c5b22e6c2dbcb08fab78a2d4540d784dbdab6e5bf930397061637da2bb861896
+    container: techneg/ci-pre-commit:v2.5.3@sha256:e175d34fb6d1d23cfe81600d91ff481288d905c43ad0997b970bf5b022376400
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       - name: Export `CI_CACHE_ID` from container
         run: echo "CI_CACHE_ID=$(cat /.ci_cache_id)" >> $GITHUB_ENV
-      - uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+      - uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
         with:
           path: ~/.cache/pre-commit
           key: "${{ env.CI_CACHE_ID }}|\
