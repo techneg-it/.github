@@ -1,8 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": [
-    "github-actions"
-  ],
   "extends": [
     "github>techneg-it/.github",
     "github>techneg-it/.github:groupManager(github-actions,actions/images)",
