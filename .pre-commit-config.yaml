@@ -35,6 +35,7 @@ repos:
                github-actions.json|
                groupManager.json|
                pre-commit.json|
+               python-versions.json|
                weekly.json|
                (?!)
           )$

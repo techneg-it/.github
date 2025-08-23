@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Preset for a Python versions datasource for use with `actions/setup-python`",
+  "customDatasources": {
+    "python-versions": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/actions/python-versions/refs/heads/main/versions-manifest.json",
+      "transformTemplates": [
+        "{'releases': $ }"
+      ]
+    }
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "actions/python-versions"
+      ],
+      "separateMinorPatch": true
+    }
+  ]
+}
