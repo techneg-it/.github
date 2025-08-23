@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Copier preset for use with techneg-it's repos",
+  "enabledManagers": [
+    "copier"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "copier"
+      ],
+      "extends": [
+        "github>techneg-it/.github:weekly"
+      ],
+      "commitMessageTopic": "template {{depName}}",
+      "semanticCommitScope": "copier",
+      "semanticCommitType": "chore"
+    }
+  ]
+}
