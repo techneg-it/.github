@@ -33,6 +33,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                copier.json|
+               git-submodules.json|
                github-actions.json|
                groupManager.json|
                pre-commit.json|
