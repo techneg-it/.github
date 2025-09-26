@@ -11,5 +11,15 @@
     "**/test/**",
     "**/tests/**",
     "**/__fixtures__/**"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "copier"
+      ],
+      "extends": [
+        ":automergeDisabled"
+      ]
+    }
   ]
 }
