@@ -34,6 +34,7 @@ repos:
                default.json|
                copier.json|
                copier-new.json|
+               copier-template.json|
                git-submodules.json|
                github-actions.json|
                groupManager.json|
