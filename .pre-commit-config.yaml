@@ -32,6 +32,7 @@ repos:
           (?x)(
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
+               check-jsonschema.json|
                copier.json|
                copier-new.json|
                copier-template.json|
