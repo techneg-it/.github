@@ -6,9 +6,12 @@
   },
   "packageRules": [
     {
-      "automerge": true,
       "matchManagers": [
         "git-submodules"
+      ],
+      "extends": [
+        ":automergeAll",
+        "github>techneg-it/.github:wednesday"
       ]
     }
   ]
