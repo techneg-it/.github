@@ -1,14 +1,10 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Auto-merge minor updates despite versions being v0.x",
-  "packageRules": [
-    {
-      "matchDepNames": [
-        "python-jsonschema/check-jsonschema"
-      ],
-      "extends": [
-        ":automergeMinor"
-      ]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Auto-merge minor updates despite versions being v0.x",
+	"packageRules": [
+		{
+			"matchDepNames": ["python-jsonschema/check-jsonschema"],
+			"extends": [":automergeMinor"]
+		}
+	]
 }

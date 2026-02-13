@@ -1,25 +1,21 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Preset with settings intended for Copier template repos",
-  "ignorePaths": [
-    "**/node_modules/**",
-    "**/bower_components/**",
-    "**/vendor/**",
-    "**/examples/**",
-    "**/template/**",
-    "**/__tests__/**",
-    "**/test/**",
-    "**/tests/**",
-    "**/__fixtures__/**"
-  ],
-  "packageRules": [
-    {
-      "matchManagers": [
-        "copier"
-      ],
-      "extends": [
-        ":automergeDisabled"
-      ]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Preset with settings intended for Copier template repos",
+	"ignorePaths": [
+		"**/node_modules/**",
+		"**/bower_components/**",
+		"**/vendor/**",
+		"**/examples/**",
+		"**/template/**",
+		"**/__tests__/**",
+		"**/test/**",
+		"**/tests/**",
+		"**/__fixtures__/**"
+	],
+	"packageRules": [
+		{
+			"matchManagers": ["copier"],
+			"extends": [":automergeDisabled"]
+		}
+	]
 }

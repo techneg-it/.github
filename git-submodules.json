@@ -1,18 +1,13 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Enable `git-submodules` manager and enalbe auto-merging",
-  "git-submodules": {
-    "enabled": true
-  },
-  "packageRules": [
-    {
-      "matchManagers": [
-        "git-submodules"
-      ],
-      "extends": [
-        ":automergeAll",
-        "github>techneg-it/.github:wednesday"
-      ]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Enable `git-submodules` manager and enalbe auto-merging",
+	"git-submodules": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchManagers": ["git-submodules"],
+			"extends": [":automergeAll", "github>techneg-it/.github:wednesday"]
+		}
+	]
 }

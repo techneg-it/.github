@@ -1,8 +1,8 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Enable `pre-commit` manager and group non-major updates",
-  "extends": [
-    "github>techneg-it/.github:groupManager(pre-commit,hooks)",
-    ":enablePreCommit"
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Enable `pre-commit` manager and group non-major updates",
+	"extends": [
+		"github>techneg-it/.github:groupManager(pre-commit,hooks)",
+		":enablePreCommit"
+	]
 }
