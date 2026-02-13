@@ -43,6 +43,7 @@ repos:
                copier-template.json|
                git-submodules.json|
                github-actions.json|
+               group-by-manager.json|
                groupManager.json|
                pre-commit.json|
                python-versions.json|
