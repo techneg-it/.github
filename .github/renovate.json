@@ -1,18 +1,16 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>techneg-it/.github",
-    "github>techneg-it/.github:github-actions",
-    "github>techneg-it/.github:pre-commit",
-    "github>techneg-it/.github:weekly",
-    ":automergeStableNonMajor"
-  ],
-  "packageRules": [
-    {
-      "matchDepNames": ["python-jsonschema/check-jsonschema"],
-      "extends": [
-        ":automergeMinor"
-      ]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"github>techneg-it/.github",
+		"github>techneg-it/.github:github-actions",
+		"github>techneg-it/.github:pre-commit",
+		"github>techneg-it/.github:weekly",
+		":automergeStableNonMajor"
+	],
+	"packageRules": [
+		{
+			"matchDepNames": ["python-jsonschema/check-jsonschema"],
+			"extends": [":automergeMinor"]
+		}
+	]
 }
