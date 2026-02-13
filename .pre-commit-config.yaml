@@ -47,6 +47,7 @@ repos:
                groupManager.json|
                pre-commit.json|
                python-versions.json|
+               update-github-actions.json|
                wednesday.json|
                weekly.json|
                (?!)
