@@ -48,6 +48,7 @@ repos:
                pre-commit.json|
                python-versions.json|
                update-github-actions.json|
+               update-gitlab-ci.json|
                update-pre-commit.json|
                wednesday.json|
                weekly.json|
