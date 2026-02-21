@@ -11,7 +11,7 @@ repos:
         language: python
         types: [json]
   - repo: https://github.com/biomejs/pre-commit
-    rev: v2.3.15
+    rev: v2.4.4
     hooks:
       - id: biome-check
         name: Check JavaScript with biome
@@ -23,13 +23,13 @@ repos:
       - id: check-yaml
         name: Check YAML files with check-yaml
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.1
+    rev: 0.36.2
     hooks:
       - id: check-github-workflows
         name: Check GitHub workflows with check-jsonschema
         args: ["--verbose"]
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 43.15.0
+    rev: 43.29.2
     hooks:
       - id: renovate-config-validator
         name: Check Renovate config with renovate-config-validator
