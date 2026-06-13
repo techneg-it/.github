@@ -23,13 +23,13 @@ repos:
       - id: check-yaml
         name: Check YAML files with check-yaml
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.2
+    rev: 0.37.3
     hooks:
       - id: check-github-workflows
         name: Check GitHub workflows with check-jsonschema
         args: ["--verbose"]
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 43.214.2
+    rev: 43.218.0
     hooks:
       - id: renovate-config-validator
         name: Check Renovate config with renovate-config-validator
