@@ -23,6 +23,8 @@ jobs:
     name: Lint / `pre-commit`
     needs: should-run
     if: fromJSON(needs.should-run.outputs.should-run)
+    env:
+      RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     container: techneg/ci-pre-commit:v2.5.47@sha256:d73cd0b63eb950a8b8bac3e5a20ec06c4224597681d921dd7ce803fbf5924465
     runs-on: ubuntu-24.04
     timeout-minutes: 5
