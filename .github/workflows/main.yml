@@ -25,14 +25,14 @@ jobs:
     if: fromJSON(needs.should-run.outputs.should-run)
     env:
       RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    container: techneg/ci-pre-commit:v2.5.47@sha256:d73cd0b63eb950a8b8bac3e5a20ec06c4224597681d921dd7ce803fbf5924465
+    container: techneg/ci-pre-commit:v2.5.48@sha256:7a263ee75dcaee23c52452bba7c8598caf2ec3a37f62a89cc9073961abf258cc
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       - name: Export `CI_CACHE_ID` from container
         run: echo "CI_CACHE_ID=$(cat /.ci_cache_id)" >> $GITHUB_ENV
-      - uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
         with:
           path: ~/.cache/pre-commit
           key: "${{ env.CI_CACHE_ID }}|\
