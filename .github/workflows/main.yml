@@ -25,7 +25,7 @@ jobs:
     if: fromJSON(needs.should-run.outputs.should-run)
     env:
       RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    container: techneg/ci-pre-commit:v2.5.49@sha256:5be3d67ffdcbf1a2a4d54e6423faa15102d86154d797e1200e2fcf875b1530bf
+    container: techneg/ci-pre-commit:v2.5.50@sha256:ee83e831fcd5917ef2877eacfb6618a786fa258a597cabb6f1be55af048c96bb
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
