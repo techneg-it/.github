@@ -12,7 +12,7 @@ concurrency:
 jobs:
   should-run:
     name: Prep / Should run
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     outputs:
       should-run: ${{ steps.action.outputs.should-run }}
@@ -26,7 +26,7 @@ jobs:
     env:
       RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     container: techneg/ci-pre-commit:v2.5.59@sha256:4505383bab3fa7aebac4a0d6be158cfef794a46e5d687e3c0504fed86aaef174
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -45,7 +45,7 @@ jobs:
     name: Release / Collect results
     permissions:
       checks: read
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     steps:
       - uses: poseidon/wait-for-status-checks@e7e24423722c5b8e97a6dd5848827d2a412f812d # v0.7.0
