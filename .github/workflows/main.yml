@@ -42,7 +42,7 @@ jobs:
           git config --global --add safe.directory $(pwd)
           pre-commit run --all-files --color always --verbose
   results:
-    name: Release / Collect results
+    name: Release / Collect${{ github.event_name == 'push' && ' push' || '' }} results
     permissions:
       checks: read
     runs-on: ubuntu-26.04
@@ -50,6 +50,8 @@ jobs:
     steps:
       - uses: poseidon/wait-for-status-checks@e7e24423722c5b8e97a6dd5848827d2a412f812d # v0.7.0
         with:
-          ignore: Release / Collect results
+          ignore: >
+            Release / Collect results,
+            Release / Collect push results,
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "::notice ::Workflow success!"
