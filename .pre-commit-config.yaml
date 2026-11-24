@@ -30,7 +30,7 @@ repos:
         name: Check GitHub workflows with check-jsonschema
         args: ["--verbose"]
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 44.244.1
+    rev: 44.231.0
     hooks:
       - id: renovate-config-validator
         name: Check Renovate config with renovate-config-validator
@@ -39,6 +39,7 @@ repos:
                (^|/).?renovate(?:rc)?(?:\.json5?)?$|
                default.json|
                check-jsonschema.json|
+               configure-renovate-updates.json|
                copier.json|
                copier-new.json|
                copier-template.json|
